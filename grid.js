@@ -31,14 +31,14 @@ function getPeople() {
         },
         {
             "id": 5,
-            "fname": "Walt",
+            "fname": "Hermenegilda",
             "sname": "Myszak",
             "birthdate": "1990-11-15",
             "sex": "W"
         },
         {
             "id": 6,
-            "fname": "Jon",
+            "fname": "Olga",
             "sname": "Snow",
             "birthdate": "1992-07-02",
             "sex": "W"
@@ -49,16 +49,45 @@ function getPeople() {
             "sname": "Kostecki",
             "birthdate": "2010-07-08",
             "sex": "M"
+        },
+        {
+            "id": 7,
+            "fname": "Michał",
+            "sname": "Kostecki",
+            "birthdate": "2010-07-08"
+        },
+        {
+            "id": 7,
+            "fname": "Grażyna",
+            "sname": "Kostecka",
+            "birthdate": "2010-07-08"
         }
     ]
 }
 
+function getSex(person) {
+    if (person.sex===undefined) {
+        return getSexByName(person)
+    }
+    return getSexByProperty(person)
+}
+
+function getSexByProperty(person) {
+    console.log('byProperty', person)
+    return (person.sex ==='M') ? 'images/mars.svg' : 'images/venus.png'
+}
+
+function getSexByName(person) {
+    console.log('byName', person)
+    return (person.fname.slice(-1)!== 'a') ? 'images/mars.svg' : 'images/venus.png'
+}
 
 function gridRow(person) {
     
     const { id, fname, sname, birthdate } = person
     const age = calculateDate(birthdate)
-    const sexImageUrl = (person.sex ==='M') ? 'images/mars.svg' : 'images/venus.png'
+
+    const sexImageUrl = getSex(person)
     return `
 
     <td class="id">${id}</td>
@@ -96,10 +125,6 @@ function grid() {
         tr.id = `person-${people[i].id}`
         table.appendChild(tr)
     }
-
-    console.log('people', people)
 }
-
-
 
 window.onload = grid;
