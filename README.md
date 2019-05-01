@@ -12,3 +12,8 @@
 		1. ukrycia jakiejś kolumny
 		2. zamiany miejscami kolumny
 		3. zmiany szerokości kolumny
+
+
+3. Co jeszcze mozna zrobic?
+    - poprawienie responsywnosci np wylaczanie niepotrzebnych kolumn
+    - poprawienie responsywnosci poprzez zmiane widoku z tabelarycznego na inny
