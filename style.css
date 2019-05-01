@@ -1,0 +1,29 @@
+*{
+    font-family: sans-serif;
+}
+.world {
+    overflow-x:auto;
+    width:100%;
+}
+.people {
+    margin:10px auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+.people tr:nth-child(even) {
+    background-color: lightgray;
+}
+.people tr:hover {
+    background-color: lightgreen;
+}
+
+.people td {
+    border: 5px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.age {
+    text-align: right;
+}
