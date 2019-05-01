@@ -27,3 +27,7 @@
 .age {
     text-align: right;
 }
+
+.sex img {
+    width:40px
+}
