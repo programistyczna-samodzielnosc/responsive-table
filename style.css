@@ -2,14 +2,10 @@
     font-family: sans-serif;
 }
 .world {
-    overflow-x:auto;
-    width:100%;
+
 }
 .people {
-    margin:10px auto;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-size: 20px;
+    font-size: 12px;
 }
 .people tr:nth-child(even) {
     background-color: lightgray;
@@ -19,7 +15,6 @@
 }
 
 .people td {
-    border: 5px solid black;
     padding: 5px;
     cursor: pointer;
 }
@@ -30,4 +25,82 @@
 
 .sex img {
     width:40px
+}
+
+.birthdate {
+    display:none;
+}
+
+.people .sex {
+    display: none;
+}
+
+.fname, .sname {
+    display: none;
+    font-weight: bold;
+}
+
+.people, .people tr, .people td, table.people tbody {
+    display: block;
+    text-align:center;
+}
+
+td.fullname {
+    display:none;
+}
+
+@media (min-width:640px) {
+    .birthdate {
+        display: table-cell;
+    }
+}
+
+
+
+@media (min-width:200px) {
+    .people {
+        display:table;
+        margin:10px auto;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .people tr {
+        display: table-row;
+    } 
+    .people td {
+        border: 1px solid black;
+        display: table-cell;
+    }
+    .people .fname, .people .sname {
+        display: none;
+       
+    }
+    .people .birthdate {
+        display: none;
+    }
+    .people tbody {
+        display: table-row-group;
+    }
+    .people td.id, .people td.age {
+        text-align: right;
+    }
+    
+
+}
+
+@media (min-width:400px) {
+    .sex {
+        display: table-cell;
+    }
+    .people .fname, .people .sname {
+        display: table-cell;
+        font-weight: normal;
+    }
+
+    .people td.fullname {
+        display: none!important;
+    }
+    .people {
+        font-size: 20px;
+    }
 }

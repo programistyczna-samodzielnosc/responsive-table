@@ -93,8 +93,9 @@ function gridRow(person) {
     <td class="id">${id}</td>
     <td class="fname">${fname}</td>
     <td class="sname">${sname}</td>
+    <td class="fullname">${fname} ${sname}</td>
     <td class="birthdate">${birthdate}</td>
-    <td class="age">${age}</td>
+    <td class="age" title="${birthdate}">${age}</td>
     <td class="sex"><img src="${sexImageUrl}"></td>
     `
 }
