@@ -118,7 +118,7 @@ function calculateDate(birthdate) {
 
 function grid() {
     let people = getPeople();
-    let table = document.querySelector('.people')
+    let table = document.querySelector('.people__body')
     for(let i=0;i<people.length;i++) {
         let tr = document.createElement('tr')
         tr.innerHTML = gridRow(people[i])
